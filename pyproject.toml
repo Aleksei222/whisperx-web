@@ -1,0 +1,35 @@
+[project]
+name = "whisperx-web"
+version = "1.0.0"
+description = "WhisperX transcription web server with speaker diarization"
+requires-python = ">=3.11"
+dependencies = [
+    "faster-whisper>=1.2.1",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "python-multipart",
+    "huggingface-hub>=1.14.0",
+    "httpx>=0.28.1",
+    "librosa>=0.11.0",
+    "numpy>=2.0.0",
+    "onnxruntime-gpu>=1.26.0",
+    "scikit-learn>=1.8.0",
+    "scipy>=1.17.1",
+    "soundfile>=0.13.1",
+    "yandex-music>=3.0.0",
+    "yt-dlp>=2026.3.17",
+    "nvidia-cudnn-cu12>=9.23.0.39",
+]
+
+[project.scripts]
+whisperx-web = "server:main"
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu126", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]

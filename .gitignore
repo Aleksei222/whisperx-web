@@ -1,0 +1,79 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# uv local state
+.uv-cache/
+
+# Application/model caches
+.cache/
+cache/
+*.cache
+
+# Hugging Face / ML model artifacts
+huggingface/
+hf-cache/
+*.onnx
+*.npy
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Local audio/video inputs and generated media
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.ogg
+*.opus
+*.aac
+*.wma
+*.webm
+*.mp4
+*.mkv
+*.mov
+*.avi
+
+# Exported transcripts
+*.srt
+transcript*.txt
+transcript*.json
+subtitles*.srt
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/editor local settings
+.idea/
+.vscode/
+*.code-workspace
+
+# Environment files with local secrets
+.env
+.env.*
+!.env.example
