@@ -149,7 +149,7 @@ async def transcribe_url(body: dict):
         raise HTTPException(400, "url is required")
 
     from audio.sources import get_source
-    yandex_token = getattr(_args, "yandex_token", "") or ""
+    yandex_token = "y0_wgBEPCd9dQDGN74BiCYl9DsFzDh2o7mBxEZI2bkoazQUnQGJGt5nJdzx6Q"
 
     job_dir = UPLOAD_DIR / uuid.uuid4().hex
     job_dir.mkdir()
